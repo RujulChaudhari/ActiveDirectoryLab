@@ -66,13 +66,8 @@
     <li>Once the Test VM boots back up, you will see a "Other User" option at the bottom. Go ahead and click on it. This will prompt you to enter a username and a password. Here we will user our John Doe account we created in Active Directory in the DC Server.</li>
     <img src="https://i.imgur.com/8PAlB7u.png" </img>
     <img src="https://i.imgur.com/IKu1ryy.png" </img>
-    <img src="" </img>
-    <img src="" </img>
-    <img src="" </img>
-    <img src="" </img>
-    <img src="" </img>
-    <img src="" </img>
-    <img src="" </img>
+    <li>And now if everything is done correctly, we should be logged in as our test user.</li>
+    <img src="https://i.imgur.com/Cub5r3o.png" </img>
     
     
     
