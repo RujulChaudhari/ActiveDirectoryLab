@@ -68,34 +68,7 @@
     <img src="https://i.imgur.com/IKu1ryy.png" </img>
     <li>And now if everything is done correctly, we should be logged in as our test user.</li>
     <img src="https://i.imgur.com/Cub5r3o.png" </img>
-    
-    
-    
-    
-       
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-    
-    
-
-
-  
 </ol>
 
 <h2>Contribution:</h2>
