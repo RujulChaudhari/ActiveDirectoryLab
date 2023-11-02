@@ -1,4 +1,4 @@
-<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project! <br/><a href="#">GitHub Repository</a></h1>
+![image](https://github.com/RujulChaudhari/ActiveDirectoryLab/assets/10265555/bf22a784-a3da-437d-8123-8d0f5c7cfca6)<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project! <br/><a href="#">GitHub Repository</a></h1>
 
 <h2>Overview:</h2>
 
@@ -32,7 +32,7 @@
     <li>Once the installation of the Server is done, you will be prompted to enter a password for the main Admin account. Make this something memorable.</li>
     <img src ="https://i.imgur.com/KariqGs.png" </img>
     <li>Once you've logged into the account, you will see that Server Manager boots up automatically. In Server Manager you want to click on the "Local Server" tab. 
-    There you want to change the Computer Name and Domain. I changed the Computer name to DC1 (Domain Controller). And the Domain to cybersecurity.com, you can name yours whatever you like. 
+    There you want to change the Computer Name. I changed the Computer name to DC1 (Domain Controller). 
     You might be prompted to restart the computer, this can be done at a later time, so click "Restart Later" for now. </li>
     <img src="https://i.imgur.com/WLtE5rG.png" </img>
     <li>So now we want ot set our ip to static. To do this you want to go to Control panel > Network and Internet > Network Connections. Here you will see the Ethernet Connection, you want to right click on it and hit "Properties". Under the Properties section, you want to double click on IPV4. By default it will be set to "Obtain an IP address automatically. You want to change this to Static. The Subnet mask and Default Gateway will remain the same. And for the DNS you want to set this to 8.8.8.8. </li>
@@ -46,6 +46,35 @@
   <img src="https://i.imgur.com/vTRwB31.png" </img>
     <li> What we want to do now is open up both our server and test machine side by side. And we're going to try and have them ping each other. If done correctly, both Server and Test VM should be communicating with each other. If they are not, please double check the IP, DNS, and Network Sharing Settings.</li>
     <img src="https://i.imgur.com/GCII7zE.png" </img>
+    <li>Now we want to hop back into the Domain Controller VM. Here what we want to do is open up Server Manager if it already isn't open. </li>
+    <img src="https://i.imgur.com/AaGVuaj.png" </img>
+    <li>On the top right you will see "Manage". You want to Click on Manage > Select "Add Roles and Features". Here you want to keep hitting next until you get to the "Server Roles" section. Under the Server Roles, you want to select "Active Directory Domain Services" and "DNS Server","Group Policy Management", and ".NET Framework 4.7 Features". Then your going to hit Next, and under the "Select Features" you want to leave it as is and hit Next. Then you just want to keep hitting next until it starts the installation process. Once the installation finishes, you will see the option to "Promote this Server to a Domain Controller". You want to go ahead and click that. This is where we will be creating our actual Domain that we will connect our Test VM to.</li>
+    <img src="https://i.imgur.com/sih5qPY.png" </img>
+    <li>Your going to select the "Add a New Forest" option. And for the Root Domain name, your going to create the Domain name. This can be whatever you'd like it to be. I set mine to "Cybersecurity.com". Once you've created the domain name, it will ask you to create the password for this. Make it something memorable and hit next. It will verify your DNS and all, you dont have to put anything in for the NetBios domain name it should autofill. And just keep hitting next through the rest of it. Once the installation finishes, your VM will reboot automatically. </li>
+    <img src="https://i.imgur.com/esn5JnU.png" </img>
+    <img src="https://i.imgur.com/NjjXNXL.png" </img>
+    <li>Once it boots up, you will see that your domain name comes up on the Admin account at the login screen.</li>
+    <img src="https://i.imgur.com/0nax3PW.png" </img
+    <li>We now want to login and go back into Server Manager, here is where we will be configuring AD. Go to Tools(top right) > and click on "Active Directory Users and Computers". </li>
+    <img src="https://i.imgur.com/mCeMojD.png" </img>
+    <li>This will open up Active Directory. Here you want to drop down your domain name, and you will see a list of folders. You want to click on the "Users" folder, this is where you can add/remove any user. For testing purposes I created a new user called "John Doe" and set his username to "JDoe", you can name yours whatever you like. This is going to be the account we use to login to the Test VM.</li>
+    <img src="https://i.imgur.com/2tpDIRi.png" </img>
+    <img src="https://i.imgur.com/TNyWzZD.png" </img>
+    <li>Now we want to open up our Test VM. Here we will just login to the default builtin "user" account first. Then you want to go to "About your PC" > Click on "Domain or Workgroup" > "Change". By default this will be set to "WORKGROUP". We want to change this to our Domain name we setup in the DC controller. Once you change it the machine will require admin credentials, here you can enter the Admin credentials of the DC controller VM. Once you enter them, the machine will require a reboot, so go ahead and do that. <ins>NOTE: if Joining the domain fails, please double check the network settings and network sharing settings.</ins></li>
+    <img src="https://i.imgur.com/RsOU51D.png" </img>
+    <img src="https://i.imgur.com/KLcettZ.png" </img>
+    <li>Once the Test VM boots back up, you will see a "Other User" option at the bottom. Go ahead and click on it. This will prompt you to enter a username and a password. Here we will user our John Doe account we created in Active Directory in the DC Server.</li>
+    <img src="https://i.imgur.com/8PAlB7u.png" </img>
+    <img src="https://i.imgur.com/IKu1ryy.png" </img>
+    <img src="" </img>
+    <img src="" </img>
+    <img src="" </img>
+    <img src="" </img>
+    <img src="" </img>
+    <img src="" </img>
+    <img src="" </img>
+    
+    
     
     
        
