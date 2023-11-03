@@ -1,4 +1,4 @@
-![image](https://github.com/RujulChaudhari/ActiveDirectoryLab/assets/10265555/bf22a784-a3da-437d-8123-8d0f5c7cfca6)<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project! <br/><a href="#">GitHub Repository</a></h1>
+<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project! <br/><a href="#">GitHub Repository</a></h1>
 
 <h2>Overview:</h2>
 
