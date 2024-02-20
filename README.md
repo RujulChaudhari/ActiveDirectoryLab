@@ -1,4 +1,4 @@
-<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project! <br/><a href="#">GitHub Repository</a></h1>
+<h1>Welcome to the Virtual Home Lab with Active Directory Setup Project!</h1>
 
 <h2>Overview:</h2>
 
